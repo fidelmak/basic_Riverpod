@@ -55,27 +55,24 @@ class ChangeNotifierScreen extends ConsumerWidget {
         ),
         backgroundColor: Colors.redAccent,
         actions: [
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: ((ctx) => CartPage())));
-            },
-            child: Stack(children: [
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.shopping_cart,
-                    color: Colors.white,
-                  )),
-              Positioned(
-                  // top: 50,
-                  left: 20,
-                  child: Text(
-                    cartNotif.product.length.toString(),
-                    style: TextStyle(color: Colors.white),
-                  )),
-            ]),
-          ),
+          Stack(children: [
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: ((ctx) => CartPage())));
+                },
+                icon: Icon(
+                  Icons.shopping_cart,
+                  color: Colors.white,
+                )),
+            Positioned(
+                // top: 50,
+                left: 20,
+                child: Text(
+                  cartNotif.product.length.toString(),
+                  style: TextStyle(color: Colors.white),
+                )),
+          ]),
         ],
       ),
       body: ListView.builder(
