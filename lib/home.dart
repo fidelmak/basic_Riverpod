@@ -3,10 +3,11 @@ import 'package:gr_analysis/ui/pages/change_notifier_screen.dart';
 import 'package:gr_analysis/ui/pages/future_provider_page.dart';
 import 'package:gr_analysis/ui/pages/provider_page.dart';
 import 'package:gr_analysis/ui/pages/state_provider_screen.dart';
+import 'package:gr_analysis/ui/pages/state_notifier_page.dart';
 import 'package:gr_analysis/ui/pages/stream_provider_page.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+class RiverPodMyHomePage extends StatelessWidget {
+  const RiverPodMyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +140,13 @@ class MyHomePage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8))),
-                      onPressed: () {},
+                      onPressed: () {
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((ctx) => StateNotifierScreen())));
+                      },
                       child: Center(
                         child: Text(" State Notifier Provider",
                             style:
