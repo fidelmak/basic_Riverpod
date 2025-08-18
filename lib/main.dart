@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gr_analysis/home.dart';
 
 import 'event_Ui/event_home.dart';
 
@@ -16,6 +17,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: "RIVERPOD",
         debugShowCheckedModeBanner: false,
-        home: SafeArea(child: EventHome()));
+        home: SafeArea(child: RiverPodMyHomePage()));
   }
 }
