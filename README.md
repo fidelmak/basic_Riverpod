@@ -249,14 +249,4 @@ lib/
 
 ---
 
-**Riverpod = Simple + Scalable + Testable**
-You can start small (`StateProvider`) and grow to advanced (`StateNotifierProvider`, async providers) easily.
-
----
-
-✍️ **Next Step Ideas**
-
-* Try replacing your `setState()` with `StateProvider`
-* Create a todo list with `StateNotifierProvider`
-* Fetch API data using `FutureProvider`
 
